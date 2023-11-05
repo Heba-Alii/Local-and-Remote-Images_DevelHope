@@ -10,11 +10,12 @@
         android:id="@+id/empty_img_one"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginTop="50dp"
         android:background="@drawable/image_selector_two"
         android:clickable="true"
         android:src="@drawable/fillimgtwo"
+        app:layout_constraintBottom_toTopOf="@+id/fill_img_one"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,36 +24,39 @@
         android:id="@+id/fill_img_one"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginTop="50dp"
         android:background="@drawable/image_selector_three"
         android:clickable="true"
         android:src="@drawable/emptyimgone"
+        app:layout_constraintBottom_toTopOf="@+id/empty_img_two"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/empty_img_one" />
+        app:layout_constraintTop_toBottomOf="@+id/empty_img_one" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/empty_img_two"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginTop="50dp"
         android:background="@drawable/image_selector_three"
         android:clickable="true"
         android:src="@drawable/fillimgone"
+        app:layout_constraintBottom_toTopOf="@+id/empty_img_three"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fill_img_one" />
+        app:layout_constraintTop_toBottomOf="@+id/fill_img_one" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/empty_img_three"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginTop="50dp"
         android:background="@drawable/image_selector_two"
         android:clickable="true"
         android:src="@drawable/emptyimgtwo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/empty_img_two" />
+        app:layout_constraintTop_toBottomOf="@+id/empty_img_two" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
