@@ -6,57 +6,74 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/empty_img_one"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/image_selector_two"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_one"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_change"
         android:clickable="true"
-        android:src="@drawable/fillimgtwo"
-        app:layout_constraintBottom_toTopOf="@+id/fill_img_one"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:longClickable="true"
+        app:shapeAppearanceOverlay="@style/roundImage"
+        android:src="@drawable/imgfour"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/img_two"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
 
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/fill_img_one"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/image_selector_three"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_two"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_change"
         android:clickable="true"
-        android:src="@drawable/emptyimgone"
-        app:layout_constraintBottom_toTopOf="@+id/empty_img_two"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/imgone"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/roundImage"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/img_three"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/empty_img_one" />
+        app:layout_constraintStart_toEndOf="@+id/img_one"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/empty_img_two"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/image_selector_three"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_three"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_change"
         android:clickable="true"
-        android:src="@drawable/fillimgone"
-        app:layout_constraintBottom_toTopOf="@+id/empty_img_three"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/roundImage"
+
+        android:src="@drawable/imgthree"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/img_four"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fill_img_one" />
+        app:layout_constraintStart_toEndOf="@+id/img_two"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/empty_img_three"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/image_selector_two"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_four"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_change"
         android:clickable="true"
-        android:src="@drawable/emptyimgtwo"
+        android:src="@drawable/imgtwo"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/roundImage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/empty_img_two" />
+        app:layout_constraintStart_toEndOf="@+id/img_three"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
