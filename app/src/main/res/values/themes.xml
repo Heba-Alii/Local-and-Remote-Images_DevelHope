@@ -14,10 +14,4 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="roundImage">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">50%</item>
-        <item name="android:clickable">true</item>
-        <item name="strokeWidth">10dp</item>
-    </style>
 </resources>

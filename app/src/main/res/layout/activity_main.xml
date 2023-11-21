@@ -6,74 +6,177 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/img_one"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:background="@drawable/bg_change"
-        android:clickable="true"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:longClickable="true"
-        app:shapeAppearanceOverlay="@style/roundImage"
-        android:src="@drawable/imgfour"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/img_two"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
-
-
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/img_two"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:background="@drawable/bg_change"
-        android:clickable="true"
-        android:src="@drawable/imgone"
-        android:scaleType="centerCrop"
-        app:shapeAppearanceOverlay="@style/roundImage"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/img_three"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/img_one"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
-
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/img_three"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:background="@drawable/bg_change"
-        android:clickable="true"
-        android:scaleType="centerCrop"
-        app:shapeAppearanceOverlay="@style/roundImage"
-
-        android:src="@drawable/imgthree"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/img_four"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/img_two"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
-
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/img_four"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:background="@drawable/bg_change"
-        android:clickable="true"
-        android:src="@drawable/imgtwo"
-        android:scaleType="centerCrop"
-        app:shapeAppearanceOverlay="@style/roundImage"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/local_imgs"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/img_three"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From Local"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/img_three"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_one"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_change"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:longClickable="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/imgfour"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/img_two"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_two"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_change"
+            android:clickable="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/imgone"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintEnd_toStartOf="@+id/img_three"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/img_one"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_three"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_change"
+            android:clickable="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/imgthree"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/img_four"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/img_two"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_four"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_change"
+            android:clickable="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/imgtwo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/img_three"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/local_imgs">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From Remote"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/remote_img_three"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/remote_img_one"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_change"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:longClickable="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/imgfour"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/remote_img_two"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/remote_img_two"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_change"
+            android:clickable="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/imgone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/remote_img_three"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/remote_img_one"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/remote_img_three"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_change"
+            android:clickable="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/imgthree"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/remote_img_four"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/remote_img_two"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/remote_img_four"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_change"
+            android:clickable="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/imgtwo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/remote_img_three"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
